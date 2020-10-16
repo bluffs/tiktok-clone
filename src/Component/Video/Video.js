@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react';
 
 import VideoFooter from '../VideoFooter/VideoFooter';
+import VideoSidebar from '../VideoSidebar/VideoSidebar';
 import './Video.css';
 
-const Video = () => {
+const Video = ({ url, channel, description, song, 
+                likes, messages, shares }) => {
     const [playing, setPlaying] = useState(false);
     const videoRef = useRef(null);
 
@@ -25,9 +27,14 @@ const Video = () => {
                 className="video__player" 
                 loop
                 ref={videoRef}
-                src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4?_=1">
+                src={url}>
             </video>
-            <VideoFooter />
+            <VideoFooter
+                channel={channel}
+                description={description}
+                song={song}
+            />
+            <VideoSidebar likes={likes} shares={shares} messages={messages} />
             {/*VideoFooter*/}
             {/*VideoSidebar*/}
         </div>
