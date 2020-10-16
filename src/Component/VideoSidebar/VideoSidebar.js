@@ -14,23 +14,23 @@ const VideoSidebar = ({ likes, shares, messages }) => {
             <div className="videoSidebar__button" >
                 {liked ? (
                     <FavoriteIcon 
-                        fontSize="Large"
+                        fontSize="large"
                         onClick={(e) => setLiked(false)}
                     />
                 ) : (
                     <FavoriteBorderIcon 
-                        fontSize="Large"
+                        fontSize="large"
                         onClick={(e) => setLiked(true)}
                     />
                 )}
                 <p>{liked ? likes + 1 : likes}</p>
             </div>
             <div className="videoSidebar__button" >
-                <MessageIcon fontSize="Large" />
+                <MessageIcon fontSize="large" />
                 <p>{messages}</p>
             </div>
             <div className="videoSidebar__button" >
-                <ShareIcon fontSize="Large" />
+                <ShareIcon fontSize="large" />
                 <p>{shares}</p>
             </div>
         </div>
