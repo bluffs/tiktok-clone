@@ -35,8 +35,6 @@ const Video = ({ url, channel, description, song,
                 song={song}
             />
             <VideoSidebar likes={likes} shares={shares} messages={messages} />
-            {/*VideoFooter*/}
-            {/*VideoSidebar*/}
         </div>
     )
 }
